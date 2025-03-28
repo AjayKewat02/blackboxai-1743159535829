@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Online Compiler</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.40.0/min/vs/loader.min.js"></script>
+    <style>
+        #editor { height: 400px; border: 1px solid #ccc; }
+        #output { min-height: 150px; background-color: #1e1e1e; color: #fff; }
+    </style>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 transition-colors duration-200">
+    <div class="container mx-auto px-4 py-8">
+        <header class="flex justify-between items-center mb-6">
+            <h1 class="text-2xl font-bold dark:text-white">JS Compiler</h1>
+            <button id="theme-toggle" class="p-2 rounded-full bg-gray-200 dark:bg-gray-700">
+                <i class="fas fa-moon dark:hidden"></i>
+                <i class="fas fa-sun hidden dark:inline"></i>
+            </button>
+        </header>
+
+        <div class="mb-4">
+            <div id="editor"></div>
+        </div>
+
+        <div class="flex space-x-4 mb-6">
+            <button id="run-btn" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
+                <i class="fas fa-play mr-2"></i>Run
+            </button>
+        </div>
+
+        <div class="bg-white dark:bg-gray-800 rounded p-4 shadow">
+            <h2 class="text-lg font-semibold mb-2 dark:text-white">Output</h2>
+            <pre id="output" class="p-4 rounded bg-gray-800 text-white overflow-auto"></pre>
+        </div>
+    </div>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>
